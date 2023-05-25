@@ -32,6 +32,8 @@ else if (strcmp(opcode, "pop") == 0)
 instruction.f = pop;
 else if (strcmp(opcode, "swap") == 0)
 instruction.f = swap;
+else if (strcmp(opcode, "add") == 0)
+instruction.f = add;
 /* Add more opcode and function mappings here */
 
 /* Handle unknown instructions */
@@ -46,6 +48,5 @@ else
 /* Handle empty lines */
 instruction.opcode = NULL;
 }
-
 return (instruction);
 }
