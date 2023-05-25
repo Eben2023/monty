@@ -24,6 +24,8 @@ else if (strcmp(opcode, "nop") == 0)
 return (nop);
 else if (strcmp(opcode, "sub") == 0)
 return (sub);
+else if (strcmp(opcode, "div_op") == 0)
+return (div_op);
 /* Add more opcode and function mappings here */
 
 return (NULL);
