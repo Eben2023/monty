@@ -59,6 +59,7 @@ void (*assign_function_pointer(char *opcode))(stack_t **, unsigned int);
 void nop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
 void div_op(stack_t **stack, unsigned int line_number);
+void mul_op(stack_t **stack, unsigned int line_number);
 
 /*Modularization of get_instruction.c*/
 void (*assign_function_pointer(char *opcode))(stack_t **, unsigned int);
