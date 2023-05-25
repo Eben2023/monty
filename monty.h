@@ -55,5 +55,9 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
+void (*assign_function_pointer(char *opcode))(stack_t **, unsigned int);
+
+/*Modularization of get_instruction.c*/
+void (*assign_function_pointer(char *opcode))(stack_t **, unsigned int);
 
 #endif /* MONTY_H */
