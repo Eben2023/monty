@@ -28,6 +28,8 @@ else if (strcmp(opcode, "div_op") == 0)
 return (div_op);
 else if (strcmp(opcode, "mul_op") == 0)
 return (mul_op);
+else if (strcmp(opcode, "mod_op") == 0)
+return (mod_op);
 /* Add more opcode and function mappings here */
 
 return (NULL);
