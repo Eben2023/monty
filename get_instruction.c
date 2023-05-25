@@ -26,6 +26,8 @@ if (strcmp(opcode, "push") == 0)
 instruction.f = push;
 else if (strcmp(opcode, "pall") == 0)
 instruction.f = pall;
+else if (strcmp(opcode, "pint") == 0)
+instruction.f = pint;
 /* Add more opcode and function mappings here */
 
 /* Handle unknown instructions */
