@@ -30,6 +30,8 @@ else if (strcmp(opcode, "pint") == 0)
 instruction.f = pint;
 else if (strcmp(opcode, "pop") == 0)
 instruction.f = pop;
+else if (strcmp(opcode, "swap") == 0)
+instruction.f = swap;
 /* Add more opcode and function mappings here */
 
 /* Handle unknown instructions */
