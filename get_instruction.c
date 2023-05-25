@@ -21,7 +21,7 @@ return (swap);
 else if (strcmp(opcode, "add") == 0)
 return (add);
 else if (strcmp(opcode, "nop") == 0)
-return (EXIT_SUCCESS);
+return (nop);
 /* Add more opcode and function mappings here */
 
 return (NULL);
