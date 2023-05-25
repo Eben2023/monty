@@ -22,6 +22,8 @@ else if (strcmp(opcode, "add") == 0)
 return (add);
 else if (strcmp(opcode, "nop") == 0)
 return (nop);
+else if (strcmp(opcode, "sub") == 0)
+return (sub);
 /* Add more opcode and function mappings here */
 
 return (NULL);
