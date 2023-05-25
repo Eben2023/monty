@@ -1,39 +1,35 @@
 #include "monty.h"
 
 /**
- * div_op - Divides the top two elements of the stack
+ * div_op - Divides the second top element of the stack by the top element
  * @stack: Double pointer to the head of the stack
  * @line_number: Line number of the opcode being executed
  */
 void div_op(stack_t **stack, unsigned int line_number)
 {
-stack_t *h = *stack;
-int len = 0, aux;
+stack_t *top, *second;
+int result;
 
-while (h)
-{
-h = h->next;
-len++;
-}
-
-if (len < 2)
+if (*stack == NULL || (*stack)->next == NULL)
 {
 fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 free_stack(*stack);
 exit(EXIT_FAILURE);
 }
 
-h = *stack;
+top = *stack;
+second = top->next;
 
-if (h->n == 0)
+if (top->n == 0)
 {
 fprintf(stderr, "L%u: division by zero\n", line_number);
 free_stack(*stack);
 exit(EXIT_FAILURE);
 }
 
-aux = h->next->n / h->n;
-h->next->n = aux;
-*stack = h->next;
-free(h);
+result = second->n / top->n;
+second->n = result;
+*stack = second;
+(*stack)->prev = NULL;
+free(top);
 }
